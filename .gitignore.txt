@@ -1,0 +1,40 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+venv/
+env/
+.venv1/
+.venv2/
+
+# IDE configs
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs / runtime
+*.log
+data/logs/
+data/exports/
+*.xlsx
+*.csv
+
+# Models
+models/*.pt   # PyTorch weights (skip, keep onnx)
+
+# Videos (big, keep folder only)
+videos/*
+!videos/4.mp4
+!videos/7.mp4
+!videos/.gitkeep
+
+# Config
+utils/config.json
+!utils/config.sample.json

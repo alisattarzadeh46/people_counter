@@ -1,0 +1,14 @@
+{
+  "confidence": 0.28,
+  "nms": 0.45,
+  "img_size": 640,
+  "skip_frames": 8,
+  "margin_px": 5,
+  "model_path": "models/yolov5s.onnx",
+  "crowd_level": 2,
+  "accuracy_level": 2,
+  "playback_speed": 1.0,
+  "_ct_max_disappeared": 50,
+  "_ct_max_distance": 50,
+  "url": 0
+}

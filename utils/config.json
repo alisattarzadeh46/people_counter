@@ -1,0 +1,22 @@
+{
+  "confidence": 0.25,
+  "nms": 0.45,
+  "img_size": 640,
+  "skip_frames": 12,
+  "margin_px": 5,
+  "model_path": "models/yolov5s.onnx",
+  "crowd_level": 3,
+  "accuracy_level": 3,
+  "playback_speed": 2.0,
+  "roi_enabled": true,
+  "roi": [],
+  "url": 0,
+  "Threshold": 15,
+  "ALERT": false,
+  "Email_Receive": "you@example.com",
+  "Log": true,
+  "Thread": false,
+  "Scheduler": false,
+  "_ct_max_disappeared": 45,
+  "_ct_max_distance": 48
+}
