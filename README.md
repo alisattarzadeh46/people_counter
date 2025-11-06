@@ -69,5 +69,40 @@ python main.py
 
 ---
 
+## 💻 Code Architecture
+
+The project is built using a **Modular Pipeline Architecture** combined with an **Event-Driven UI**.  
+While not strictly MVC, the design achieves similar separation of concerns — isolating data input, detection logic, visualization, and user interaction.
+
+### 🏗️ Architecture Type
+> **Modular Pipeline with Event-Driven UI**
+
+This structure ensures that each functional block (input, detection, tracking, and visualization) can be modified or replaced independently without affecting the rest of the system.
+
+---
+
+### 📂 Project Structure Overview
+
+| **Layer** | **Description** | **Example Files** |
+|------------|-----------------|------------------|
+| **1️⃣ Input Layer** | Handles video input, frame extraction, and basic preprocessing. | `io.py`, `pipeline.py` |
+| **2️⃣ Detection Layer** | Runs YOLOv5 model exported to ONNX for lightweight detection of people in each frame. | `tracking.py` |
+| **3️⃣ Tracking & Logic Layer** | Performs centroid calculation, direction detection, and cross-line logic for entry/exit counting. | `direction.py`, `drawing.py` |
+| **4️⃣ Visualization Layer** | Draws bounding boxes, line indicators, and live counters on the video stream. | `drawing.py` |
+| **5️⃣ UI Layer** | Provides user controls and interactive interface for running or stopping the system. | `ui_main.py`, `ui_settings.py`, `widgets.py` |
+| **6️⃣ Configuration Layer** | Defines adjustable parameters (paths, thresholds, and detection settings). | `config.py` |
+
+---
+
+### 🧠 Design Highlights
+
+- 🧩 **Pipeline-based processing:** Frames flow through a defined sequence — Input → Detect → Track → Count → Draw.  
+- 🪶 **Lightweight modules:** Each step is contained in a separate file to enhance readability and maintainability.  
+- ⚙️ **Decoupled UI:** Graphical interface elements are independent from processing logic.  
+- 💡 **CPU-Optimized:** Designed for real-time operation without GPU dependency.  
+- 🔁 **Extensible:** New detectors (e.g., DeepSORT, ByteTrack) or trackers can be easily integrated.  
+
+---
+
 ## 📜 License
 MIT License. Free to use and modify.
